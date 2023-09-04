@@ -142,8 +142,8 @@ if(is(spatial_count,"matrix")){
 			}else{
 				stop("spatial resolved transcriptomic counts has to be of following forms: vector,matrix or sparseMatrix")
 }
-if (any(rownames(x = spatial_countMat) == '')) {
-			stop("Gene names of spatial count matrix cannot be empty", call. = FALSE)
+#if (any(rownames(x = spatial_countMat) == '')) {
+			#stop("Gene names of spatial count matrix cannot be empty", call. = FALSE)
 }
 commonGene = intersect(rownames(spatial_countMat),rownames(assays(sc_eset)$counts))
 if (length(commonGene) == 0) {
